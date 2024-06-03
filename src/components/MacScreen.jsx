@@ -6,7 +6,7 @@ import About from "./About";
 import Projects from "./Projects";
 
 const MacScreen = ({ isTurnedOn }) => {
-  const [isSelectedChoice, setIsSelectedChoice] = useState("menu");
+  const [isSelectedChoice, setIsSelectedChoice] = useState("home");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
@@ -43,7 +43,7 @@ const MacScreen = ({ isTurnedOn }) => {
 
   const handleScreenMenuClick = (link) => {
     switch (link) {
-      case "menu":
+      case "home":
         setIsSelectedChoice(link);
         break;
       case "about":
@@ -72,10 +72,12 @@ const MacScreen = ({ isTurnedOn }) => {
           >
             <source src={vhsVideo} type="video/mp4" />
           </video>
-          {isSelectedChoice === "menu" ? (
+          {isSelectedChoice === "home" ? (
             <ScreenMenu onClick={handleScreenMenuClick} />
           ) : null}
-          {isSelectedChoice === "about" ? <About /> : null}
+          {isSelectedChoice === "about" ? (
+            <About onClick={handleScreenMenuClick} />
+          ) : null}
           {isSelectedChoice === "projects" ? <Projects /> : null}
           {isSelectedChoice === "contact" ? <ContactForm /> : null}
         </div>

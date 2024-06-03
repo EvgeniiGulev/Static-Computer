@@ -2,8 +2,8 @@ import React from "react";
 
 const ScreenMenu = ({ onClick }) => {
   return (
-    <div className="absolute mx-4 my-4 w-full h-full">
-      <h1 className="text-4xl font-bold w-full">Main Menu</h1>
+    <div className="absolute py-[10px] w-full h-full text-center">
+      <h1 className="text-4xl font-bold w-full highlight-item">Main Menu</h1>
       <ul className="pt-2">
         <li className="list-item">
           <span className="hover:underline" onClick={() => onClick("about")}>

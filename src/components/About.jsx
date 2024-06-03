@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import pdfCv from "../assets/pdf/CV.pdf";
 import {
   css,
   git,
@@ -10,9 +11,8 @@ import {
   typescript,
   python,
 } from "../constants";
-import pdfCv from "../assets/pdf/CV.pdf";
 
-const About = () => {
+const About = ({ onClick }) => {
   return (
     <div className="absolute p-2 w-full h-full overflow-y-scroll">
       <h1 className="text-2xl highlight-item font-bold">Evgenii Gulev, 18</h1>
@@ -116,6 +116,12 @@ const About = () => {
           </span>
         </p>
       </div>
+      <p
+        class="text-lg font-bold text-orange-500 hover:text-orange-700 transition duration-300 ease-in-out cursor-pointer"
+        onClick={() => onClick("home")}
+      >
+        › Return Home
+      </p>
     </div>
   );
 };
