@@ -24,7 +24,10 @@ const About = ({ onClick }) => {
         View my
         <span className="highlight-item">
           {" "}
-          <a href={pdfCv}> Resume.</a>
+          <a href={pdfCv} target="_blank">
+            {" "}
+            Resume.
+          </a>
         </span>
       </p>
       <p className="highlight-item text-lg font-semibold mt-[7px]">My Skills</p>

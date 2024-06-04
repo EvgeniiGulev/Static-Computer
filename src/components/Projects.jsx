@@ -17,7 +17,10 @@ const Projects = ({ onClick }) => {
         This is my portfolio website which is styled to be like an old school
         computer. Made using javascript, react, tailwindcss & three/fiber.{" "}
         <span className="highlight-item text-sm">
-          <a href={"https://github.com/EvgeniiGulev/Discord-Anilist-Bot"}>
+          <a
+            href={"https://github.com/EvgeniiGulev/Static-Computer"}
+            target="_blank"
+          >
             Visit Project!
           </a>
         </span>
@@ -28,21 +31,31 @@ const Projects = ({ onClick }) => {
       <p className="w-[97.5%] h-max">
         This is a{" "}
         <span className="text-purple-300">
-          <a href="https://discord.com/">Discord</a>
+          <a href="https://discord.com/" target="_blank">
+            Discord
+          </a>
         </span>{" "}
         bot that fetches [anime/character] data using the{" "}
         <span className="highlight-item">
-          <a href={"https://anilist.gitbook.io/anilist-apiv2-docs"}>
+          <a
+            href="https://anilist.gitbook.io/anilist-apiv2-docs"
+            target="_blank"
+          >
             Anilist.co
           </a>
         </span>{" "}
         Api then returns it in the set{" "}
         <span className="text-purple-300">
-          <a href="https://discord.com/">Discord</a>
+          <a href="https://discord.com/" target="_blank">
+            Discord
+          </a>
         </span>{" "}
         channel. This project was made using javascript{" "}
         <span className="highlight-item text-sm">
-          <a href={"https://github.com/EvgeniiGulev/Discord-Anilist-Bot"}>
+          <a
+            href="https://github.com/EvgeniiGulev/Discord-Anilist-Bot"
+            target="_blank"
+          >
             Visit Project!
           </a>
         </span>
