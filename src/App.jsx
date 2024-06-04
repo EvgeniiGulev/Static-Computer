@@ -68,7 +68,7 @@ function App() {
         className="w-full h-full bg-transparent"
         camera={{ fov: 80, position: cameraPosition }}
       >
-        <ambientLight intensity={0.2} />
+        
         <Suspense fallback={<Loader />}>
           <Macintosh position={computerPosition} scale={computerScale} />
         </Suspense>

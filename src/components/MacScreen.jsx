@@ -78,7 +78,9 @@ const MacScreen = ({ isTurnedOn }) => {
           {isSelectedChoice === "about" ? (
             <About onClick={handleScreenMenuClick} />
           ) : null}
-          {isSelectedChoice === "projects" ? <Projects /> : null}
+          {isSelectedChoice === "projects" ? (
+            <Projects onClick={handleScreenMenuClick} />
+          ) : null}
           {isSelectedChoice === "contact" ? <ContactForm /> : null}
         </div>
       ) : (
