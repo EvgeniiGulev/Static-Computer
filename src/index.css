@@ -15,7 +15,6 @@
 :root {
   --color-dark-gray: #222831;
   --color-gray: #31363f;
-  --color-light-blue: #76abae;
   --color-silk: #eeeeee;
   --color-yellow: #ffe900;
 }
@@ -27,9 +26,6 @@
 }
 .gray {
   @apply text-[var(--color-gray)];
-}
-.light-blue {
-  @apply text-[var(--color-light-blue)];
 }
 .dark-gray {
   @apply text-[var(--color-dark-gray)];
