@@ -1,5 +1,7 @@
 # Computer Portfolio
 
+My Computer Portfolio
+
 ## A Dynamic Computer-Styled Showcase
 
 Welcome to PowerUp Portfolio, where your digital presence gets a sleek upgrade! This GitHub project is more than just a typical portfolio – it's a virtual computer experience designed to impress.
