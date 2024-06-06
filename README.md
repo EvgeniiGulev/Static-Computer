@@ -1,6 +1,5 @@
 # Computer Portfolio
-
-My Computer Portfolio
+My Computer Styled Portfolio
 
 ## A Dynamic Computer-Styled Showcase
 
