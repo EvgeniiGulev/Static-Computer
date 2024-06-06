@@ -1,5 +1,8 @@
 # Computer Portfolio
-My Computer Styled Portfolio
+
+## My Computer Styled Portfolio
+
+Welcome to the Computer Portfolio, a dynamic showcase styled like a computer desktop. This GitHub project is designed to present your digital presence in a unique and engaging way.
 
 ## A Dynamic Computer-Styled Showcase
 
