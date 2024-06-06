@@ -1,3 +1,10 @@
+/**
+ * Author: Evgenii Gulev
+ * Description: This file contains the main App component for a React application that renders a 3D Macintosh model
+ *              with sound effects and interactive elements using @react-three/fiber and other custom components.
+ * Date/Time: 2024-06-06
+ */
+
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "./components/Loader";
@@ -11,28 +18,37 @@ import iconSoundOff from "./assets/icons/soundoff.png";
 import PowerBtn from "./components/PowerBtn";
 
 function App() {
+  // State for tracking whether the computer is turned on
   const [isTurnedOn, setIsTurnedOn] = useState(false);
+
+  // State for tracking whether the sound is enabled
   const [isSoundOn, setIsSoundOn] = useState(true);
+
+  // Ref for mouse click audio
   const mouseClickAudioRef = useRef(new Audio(mouseClickSound));
   mouseClickAudioRef.current.volume = 0.6;
   mouseClickAudioRef.current.playbackRate = 2;
 
+  // Ref for key press audio
   const keyPressAudioRef = useRef(new Audio(keyPressSound));
   keyPressAudioRef.current.volume = 0.4;
   keyPressAudioRef.current.playbackRate = 5;
 
+  // Function to handle mouse clicks
   const handleMouseClick = () => {
     if (isSoundOn) {
       mouseClickAudioRef.current.play();
     }
   };
 
+  // Function to handle key presses
   const handleKeyPressed = () => {
     if (isSoundOn) {
       keyPressAudioRef.current.play();
     }
   };
 
+  // useEffect hook to add and remove event listeners for mouse clicks and key presses
   useEffect(() => {
     if (isSoundOn) {
       document.addEventListener("pointerdown", handleMouseClick);
@@ -47,6 +63,7 @@ function App() {
     };
   }, [isSoundOn]);
 
+  // Function to adjust the computer model based on the screen size
   const adjustComputerForScreen = () => {
     let computerScale = [0.05, 0.05, 0.05];
     let computerPosition = [0, -0.25, 0];
@@ -59,6 +76,8 @@ function App() {
     }
     return [computerScale, computerPosition, cameraPosition];
   };
+
+  // Destructuring the values from adjustComputerForScreen function
   const [computerScale, computerPosition, cameraPosition] =
     adjustComputerForScreen();
 
@@ -88,5 +107,3 @@ function App() {
 }
 
 export default App;
-
-//onClick={() => setIsTurnedOn(!isTurnedOn)}

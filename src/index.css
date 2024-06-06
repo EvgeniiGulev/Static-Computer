@@ -1,47 +1,66 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
+/* Tailwind CSS styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
-  -webkit-user-select: none;
+  -webkit-user-select: none; /* Disable text selection */
   -khtml-user-select: none;
   -moz-user-select: -moz-none;
   -o-user-select: none;
-  overflow: hidden;
+  overflow: hidden; /* Hide overflow */
 }
+
+/* Define color variables */
 :root {
   --color-dark-gray: #222831;
   --color-gray: #31363f;
   --color-silk: #eeeeee;
   --color-yellow: #ffe900;
 }
+
+/* Main container styles */
 .main-container {
-  @apply bg-[var(--color-dark-gray)];
-}
-.silk {
-  @apply text-[var(--color-silk)];
-}
-.gray {
-  @apply text-[var(--color-gray)];
-}
-.dark-gray {
-  @apply text-[var(--color-dark-gray)];
-}
-.list-item {
-  @apply cursor-pointer;
-  @apply text-xl;
-  @apply hover:text-[var(--color-yellow)];
-}
-.highlight-item {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-yellow)] to-purple-300;
-}
-.line-break {
-  @apply w-[90%] border-[var(--color-yellow)] border-0 border-t-[1px];
+  @apply bg-[var(--color-dark-gray)]; /* Apply background color */
 }
 
+/* Text color classes */
+.silk {
+  @apply text-[var(--color-silk)]; /* Apply text color */
+}
+
+.gray {
+  @apply text-[var(--color-gray)]; /* Apply text color */
+}
+
+.dark-gray {
+  @apply text-[var(--color-dark-gray)]; /* Apply text color */
+}
+
+/* List item styles */
+.list-item {
+  @apply cursor-pointer; /* Apply cursor pointer */
+  @apply text-xl; /* Apply text size */
+  @apply hover:text-[var(--color-yellow)]; /* Apply hover text color */
+}
+
+/* Highlighted text styles */
+.highlight-item {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-yellow)] to-purple-300; /* Apply gradient text */
+}
+
+/* Line break styles */
+.line-break {
+  @apply w-[90%] border-[var(--color-yellow)] border-0 border-t-[1px]; /* Apply line break */
+}
+
+/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -59,6 +78,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #aaa;
 }
+
+/* Skills icon styles */
 .skills-icon {
   width: 50px; /* reduced the size by 30px */
   height: 50px;

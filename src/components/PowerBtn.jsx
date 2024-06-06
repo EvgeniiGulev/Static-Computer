@@ -1,10 +1,19 @@
+/**
+ * Author: Evgenii Gulev
+ * Description: This file defines the 'PowerBtn' component, which represents the power button of the Macintosh computer.
+ * Date/Time: 2024-06-06
+ */
+
 import React, { useState, useEffect } from "react";
 import iconPowerBtn from "../assets/icons/power-button.png";
 
+// Define the PowerBtn component
 const PowerBtn = ({ onClick }) => {
+  // State variables to track window dimensions
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
+  // Effect to update window dimensions on resize
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -14,6 +23,7 @@ const PowerBtn = ({ onClick }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Function to calculate dynamic styles for the power button position
   const dynamicPositionStyles = () => {
     const topLeftX = 610;
     const topLeftY = 620;
@@ -37,6 +47,7 @@ const PowerBtn = ({ onClick }) => {
     };
   };
 
+  // Render the PowerBtn component
   return (
     <div
       style={dynamicPositionStyles()}
@@ -48,4 +59,5 @@ const PowerBtn = ({ onClick }) => {
   );
 };
 
+// Export the PowerBtn component
 export default PowerBtn;

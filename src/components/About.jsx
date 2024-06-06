@@ -1,4 +1,10 @@
-import React, { useEffect } from "react";
+/**
+ * Author: Evgenii Gulev
+ * Description: This file defines the 'About' component which provides information about the author, including skills, projects, and contact details.
+ * Date/Time: 2024-06-06
+ */
+
+import React from "react";
 import pdfCv from "../assets/pdf/CV.pdf";
 import {
   css,
@@ -12,19 +18,22 @@ import {
   python,
 } from "../constants";
 
+// Define the About component
 const About = ({ onClick }) => {
   return (
     <div className="absolute p-2 w-full h-full overflow-y-scroll">
+      {/* Display the author's name and age */}
       <h1 className="text-2xl highlight-item font-bold">Evgenii Gulev, 18</h1>
       <hr className="line-break my-[7px]" />
       <p className="w-[97.5%] h-max">
+        {/* Brief description of the author */}
         Software Engineer based in
         <span className="highlight-item"> Cyprus</span>, specializing in
-        technical education through hands on learning and building applications.
+        technical education through hands-on learning and building applications.
         View my
         <span className="highlight-item">
           {" "}
-          <a href={pdfCv} target="_blank">
+          <a href={pdfCv} target="_blank" rel="noopener noreferrer">
             {" "}
             Resume.
           </a>
@@ -32,6 +41,7 @@ const About = ({ onClick }) => {
       </p>
       <p className="highlight-item text-lg font-semibold mt-[7px]">My Skills</p>
       <div className="flex flex-wrap justify-center p-2 rounded-md">
+        {/* Render skill icons with links */}
         <a
           href="https://www.w3.org/Style/CSS/Overview.en.html"
           target="_blank"
@@ -100,10 +110,15 @@ const About = ({ onClick }) => {
         Visit My Github
       </p>
       <div>
-        I've worked on all kinds of public/private open source projects,
+        {/* Information about the author's GitHub projects */}
+        I've worked on all kinds of public/private open-source projects,
         leveling up my skills and teaming up with smart people.{" "}
         <span className="highlight-item">
-          <a href="https://github.com/EvgeniiGulev" target="_blank">
+          <a
+            href="https://github.com/EvgeniiGulev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             My Projects!
           </a>
         </span>
@@ -112,6 +127,7 @@ const About = ({ onClick }) => {
         Let's Talk!
       </p>
       <div>
+        {/* Contact information */}
         <p>
           Got a project idea or business inquiry you want to discuss?{" "}
           <span className="highlight-item">
@@ -119,8 +135,9 @@ const About = ({ onClick }) => {
           </span>
         </p>
       </div>
+      {/* Return home link */}
       <p
-        class="text-lg font-bold text-orange-500 hover:text-orange-700 transition duration-300 ease-in-out cursor-pointer"
+        className="text-lg font-bold text-orange-500 hover:text-orange-700 transition duration-300 ease-in-out cursor-pointer"
         onClick={() => onClick("home")}
       >
         › Return Home

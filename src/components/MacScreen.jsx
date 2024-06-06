@@ -1,3 +1,9 @@
+/**
+ * Author: Evgenii Gulev
+ * Description: This file defines the 'MacScreen' component, which represents the screen of the Macintosh computer and handles its content based on user interaction.
+ * Date/Time: 2024-06-06
+ */
+
 import React, { useState, useEffect } from "react";
 import vhsVideo from "../assets/videos/vhs-video-2.mp4";
 import ContactForm from "./ContactForm";
@@ -5,11 +11,14 @@ import ScreenMenu from "./ScreenMenu";
 import About from "./About";
 import Projects from "./Projects";
 
+// Define the MacScreen component
 const MacScreen = ({ isTurnedOn }) => {
+  // State variables to track the selected choice and window dimensions
   const [isSelectedChoice, setIsSelectedChoice] = useState("home");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
+  // Effect to update window dimensions on resize
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -19,6 +28,7 @@ const MacScreen = ({ isTurnedOn }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Function to calculate dynamic styles for the screen box
   const dynamicBoxStyles = () => {
     const topLeftX = 461;
     const topLeftY = 369;
@@ -41,6 +51,7 @@ const MacScreen = ({ isTurnedOn }) => {
     };
   };
 
+  // Function to handle screen menu click
   const handleScreenMenuClick = (link) => {
     switch (link) {
       case "home":
@@ -60,10 +71,13 @@ const MacScreen = ({ isTurnedOn }) => {
     }
   };
 
+  // Render the MacScreen component
   return (
     <div style={dynamicBoxStyles()} className="absolute rounded-sm">
+      {/* Check if the computer is turned on */}
       {isTurnedOn ? (
         <div className="font-redditMono silk">
+          {/* Render video background */}
           <video
             autoPlay={true}
             loop={true}
@@ -72,6 +86,7 @@ const MacScreen = ({ isTurnedOn }) => {
           >
             <source src={vhsVideo} type="video/mp4" />
           </video>
+          {/* Conditionally render different components based on selected choice */}
           {isSelectedChoice === "home" ? (
             <ScreenMenu onClick={handleScreenMenuClick} />
           ) : null}
@@ -92,4 +107,5 @@ const MacScreen = ({ isTurnedOn }) => {
   );
 };
 
+// Export the MacScreen component
 export default MacScreen;
