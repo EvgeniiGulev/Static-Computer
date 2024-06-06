@@ -1,2 +1,2 @@
 # Static-Computer
- 
+# NOTICE: NOT OPTIMIZED FOR SMALLER DEVICES
