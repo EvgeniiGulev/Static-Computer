@@ -33,8 +33,14 @@ And the following Node.js modules:
 1. Clone this repository to your local machine using `git clone https://github.com/your-username/your-repository.git`
 2. Navigate to the project directory: `cd your-repository`
 3. Install the required dependencies: `npm install`
-4. For development, run: `npm run dev`
-5. For the final version, run: `npm run build`
-6. Open your web browser and navigate to `http://localhost:5173` to view the portfolio.
+4. Add a `.env.local` file for all the EmailJS keys. This file should include the following keys:
+   ```env
+   VITE_APP_EMAILJS_SERVICE_ID=your_service_id
+   VITE_APP_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_APP_EMAILJS_USER_ID=your_user_id
+   ```
+5. For development, run: `npm run dev`
+6. For the final version, run: `npm run build`
+7. Open your web browser and navigate to `http://localhost:5173` to view the portfolio.
 
 **Note:** This project is not optimized for small devices with a width less than 768 pixels.
