@@ -23,6 +23,7 @@ To run this project locally, ensure you have the following prerequisites install
 
 And the following Node.js modules:
 
+- [emailjs](https://www.npmjs.com/package/emailjs)
 - [typewriter-effect](https://www.npmjs.com/package/typewriter-effect)
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei)
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber)
