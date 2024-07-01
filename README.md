@@ -43,4 +43,4 @@ And the following Node.js modules:
 6. For the final version, run: `npm run build`
 7. Open your web browser and navigate to `http://localhost:5173` to view the portfolio.
 
-**Note:** This project is not optimized for small devices with a width less than 768 pixels.
+**Note:** This project is not optimized for devices with a width less than 768 pixels.
